@@ -1,0 +1,16 @@
+header {
+    position: relative;
+  }
+  
+  nav a {
+    transition: color 0.3s;
+  }
+  
+  .mobile-menu {
+    transform: translateY(-100%);
+  }
+  
+  .mobile-menu.show {
+    transform: translateY(0);
+  }
+  

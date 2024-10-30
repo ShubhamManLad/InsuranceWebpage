@@ -1,0 +1,48 @@
+<header class="flex items-center justify-between p-4 bg-primary-200">
+  <!-- Logo -->
+  <h1 class="text-3xl text-primary-50 font-bold">Logo</h1>
+
+  <!-- Hamburger Icon (visible on small screens) -->
+  <button 
+    class="lg:hidden text-primary-50 focus:outline-none sm:flex"
+    (click)="toggleMenu()">
+    Menu
+  </button>
+
+  <!-- Navbar Links (visible on large screens) -->
+  <nav class="xs:hidden sm:hidden md:hidden lg:flex space-x-8 text-primary-50 font-bold">
+    <a href="#" class="hover:text-primary-100">Home</a>
+    <a href="#" class="hover:text-primary-100">Pages</a>
+    <a href="#" class="hover:text-primary-100">Insurances</a>
+    <a href="#" class="hover:text-primary-100">Blog</a>
+    <a href="#" class="hover:text-primary-100">Contact Us</a>
+  </nav>
+
+  <!-- Phone & Quote Button -->
+  <div class="hidden lg:flex items-center space-x-6">
+    <span>+(111) 65 458 856</span>
+    <button class="bg-primary-50 px-4 py-2 rounded text-primary-200 hover:bg-primary-100">
+      Get a Quote
+    </button>
+  </div>
+
+  <!-- Mobile Menu (visible when isMenuOpen is true) -->
+  <div
+    class="absolute top-16 left-0 w-full bg-primary-200"
+    *ngIf="isMenuOpen">
+
+    <nav class="flex flex-col items-end mx-16 space-y-4 py-4 text-primary-50 font-bold">
+      <a href="#" class="hover:text-primary-100">Home</a>
+      <a href="#" class="hover:text-primary-100">Pages</a>
+      <a href="#" class="hover:text-primary-100">Insurances</a>
+      <a href="#" class="hover:text-primary-100">Blog</a>
+      <a href="#" class="hover:text-primary-100">Contact Us</a>
+    </nav>
+    <div class="flex flex-col items-end space-y-4 py-4 mx-16">
+      <span>+(111) 65 458 856</span>
+      <button class="bg-primary-50 px-4 py-2 rounded text-primary-200 hover:bg-primary-100">
+        Get a Quote
+      </button>
+    </div>
+  </div>
+</header>
